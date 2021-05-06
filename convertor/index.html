@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <title>Nalog</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="shortcut icon" href="title.png" />
+  <link rel="stylesheet" href="bootstrap.min.css">
+</head>
+<style>
+ .textDec{
+	 border-bottom: 2px solid #fff;
+ }
+</style>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="#"><img src="./images/logo.png" alt="" style="width: 40px; height: 35px" /></a>
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+        </div>
+    </nav>
+	<div class="container-fluid" style='margin-top: 30px;'>
+	  <form method="post" class="needs-validation" action="insertData.php" enctype="multipart/form-data">
+		<div class ="container-fluid">
+			<div class="row">
+				<div class="col-12">
+					<div class="form-group">
+				  <div class="custom-file">
+					  <input type="file" class="custom-file-input" name="excel" id="customFileLang" lang="ru">
+					  <label class="custom-file-label" for="customFileLang">Выберите файл</label>
+				  </div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class ="container-fluid">
+			<button type="submit" class="btn btn-dark float-right" style="margin-left: 20px" name="saveData">Импорть</button>
+		</div>
+	  </form>
+
+	</div>
+	<script>
+	document.querySelector('.btn').addEventListener('click', function(){
+		if(document.querySelector('#customFileLang').files.length != 0){
+			alert('Файл успешно создан!');
+		}
+	});
+	</script>
+</body>
+</html>
